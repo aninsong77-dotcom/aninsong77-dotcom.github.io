@@ -45,6 +45,45 @@
     text-align: center;
     font-size: 14px;
   }
+  a.tool {
+    position: relative;
+  }
+  a.tool .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    background: #2b2b2b;
+    color: #f5f5f5;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 13px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    transition: opacity 0.15s ease;
+    z-index: 10;
+    pointer-events: none;
+    white-space: pre-line;
+  }
+  a.tool .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #2b2b2b transparent transparent transparent;
+  }
+  a.tool:hover .tooltip,
+  a.tool:focus .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
 </style>
 </head>
 <body>
@@ -52,22 +91,28 @@
   <a class="tool" href="https://aninsong77-dotcom.github.io/research-notes/">
     <img src="icon/note.ico" alt="research-notes">
     <span>research-notes</span>
+    <span class="tooltip">연구노트는 논문을 읽고 정리해서 내 연구(논문 쓰기)를 돕는 앱이에요. 왼쪽 메뉴로 연구 책상·분류 모아보기·모형스케치북·아이디어·논문·자료·참고문헌을 오갈 수 있어요.
+자료는 이 브라우저(이 컴퓨터)에 저장돼요.</span>
   </a>
   <a class="tool" href="https://aninsong77-dotcom.github.io/hootooti-prov-dx/index.html">
     <img src="icon/favicon-hootooti.png" alt="hootooti-prov-dx">
     <span>hootooti-prov-dx</span>
+    <span class="tooltip">후투티는 임상가·상담자를 위한 증상 체크리스트 기반 진단 스크리닝 보조 웹앱입니다. DSM-5-TR의 18개 진단 범주에 걸쳐 81개 진단의 증상 체크리스트를 제공하며, 내담자 소견을 입력하거나 체크한 항목을 실시간으로 채점해 기준 충족 가능성이 높은 진단 순으로 보여줍니다. 빌드 과정이나 서버가 필요 없는 순수 HTML/CSS/JS 정적 페이지이며, 입력한 정보는 브라우저 화면에만 유지되고 어디로도 전송되지 않습니다.</span>
   </a>
   <a class="tool" href="https://aninsong77-dotcom.github.io/gonglbaki/">
     <img src="icon/favicon_gon.ico" alt="가계도 스케치북">
     <span>가계도 스케치북</span>
+    <span class="tooltip">가계도(Genogram)는 가족 구조와 구성원 간의 관계를 시각화하는 도구입니다. 상담 장면에서 내담자의 가족 역동을 파악하고 기록하는 데 활용됩니다.</span>
   </a>
   <a class="tool" href="https://github.com/aninsong77-dotcom/gonglbaki-windows/releases/tag/v1.0.0">
     <img src="icon/favicon_gon.ico" alt="gonglbaki 다운로드 (Windows)">
     <span>gonglbaki 다운로드 (Windows)</span>
+    <span class="tooltip">축어록 프로그램은 보고서용 상담 축어록을 작성해야 하는 상담학과 학생, 수련생, 상담사를 위해 만들어졌습니다. (Windows 설치파일 다운로드)</span>
   </a>
   <a class="tool" href="https://github.com/aninsong77-dotcom/gonglbaki-mac/releases/download/mac-latest/Gonglbaki-1.0.0-arm64.dmg">
     <img src="icon/favicon_gon.ico" alt="gonglbaki 다운로드 (Mac)">
     <span>gonglbaki 다운로드 (Mac)</span>
+    <span class="tooltip">축어록 프로그램은 보고서용 상담 축어록을 작성해야 하는 상담학과 학생, 수련생, 상담사를 위해 만들어졌습니다. (Mac 설치파일 다운로드)</span>
   </a>
 </div>
 </body>
