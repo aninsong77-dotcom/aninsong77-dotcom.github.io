@@ -79,6 +79,24 @@
     border-style: solid;
     border-color: transparent transparent #2b2b2b transparent;
   }
+  .links a.tool:first-child .tooltip {
+    left: 0;
+    transform: translateX(0);
+  }
+  .links a.tool:first-child .tooltip::after {
+    left: 32px;
+    transform: translateX(-50%);
+  }
+  .links a.tool:last-child .tooltip {
+    left: auto;
+    right: 0;
+    transform: translateX(0);
+  }
+  .links a.tool:last-child .tooltip::after {
+    left: auto;
+    right: 32px;
+    transform: translateX(50%);
+  }
   a.tool:hover .tooltip,
   a.tool:focus .tooltip {
     visibility: visible;
