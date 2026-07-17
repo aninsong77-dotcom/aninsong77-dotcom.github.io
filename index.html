@@ -2,12 +2,25 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>내 툴 모음</title>
+<title>내 도구 모음</title>
 <link rel="icon" type="image/png" href="icon/face2-transparent.png">
 <style>
   body {
     font-family: sans-serif;
     padding: 40px;
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("icon/face2-transparent.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: min(60vw, 500px);
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: -1;
   }
   .links {
     display: flex;
